@@ -208,3 +208,15 @@
   </div>
 </div>
 {%- endblock %}
+{%- block rtd_search %}
+  {%- if READTHEDOCS %}
+  <script>
+    if (typeof READTHEDOCS_DATA !== 'undefined') {
+        if (!READTHEDOCS_DATA.features) {
+          READTHEDOCS_DATA.features = {};
+        }
+        READTHEDOCS_DATA.features.docsearch_disabled = true;
+      }
+    </script>
+  {%- endif %}
+{%- endblock %}
